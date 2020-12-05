@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  background-color: var(--violet);
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*--------------------HEADER--------------------*/
+
+.header {
+  height: 30px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.header__logo {
+  height: 100%;
+}
+
+/*-----------------ILUSTRACIÓN-----------------*/
+
+.image-container {
+  width: 300px;
+}
+
+.image-container__img {
+  width: 100%;
+}
+
+/*-----------------TEXTO-----------------*/
+
+.text-container {
+  color: #fff;
+  margin-top: 60px;
+  text-align: center;
+  width: 300px;
+}
+
+.text-container__title {
+  font-weight: 600;
+  font-size: 27px;
+}
+
+.text-container__text {
+  font-weight: 400;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+
+.text-container__btn {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--violet);
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  width: 70%;
+  margin: 25px auto;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.text-container__btn:hover {
+  background-color: var(--soft-magenta);
+  color: #fff;
+}
+
+/*-----------------TEXTO-----------------*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer__red-social {
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: border-color 0.5s ease, color 0.5s ease;
+}
+
+.footer__red-social:hover {
+  border-color: var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+/*----------------MEDIAS QUARIES----------------*/
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    padding: 30px 60px;
+  }
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .image-container {
+    width: 50%;
+  }
+  .text-container {
+    width: 45%;
+  }
+  .footer {
+    justify-content: flex-end;
+    margin-top: 3px;
+  }
+}
